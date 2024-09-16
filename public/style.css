@@ -1,0 +1,93 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(193, 130, 245); /* Fallback background color */
+    background-image: url('/public/chatbackground.jpeg'); /* Path to background image */
+    background-size: cover; /* Make sure the image covers the entire viewport */
+    background-position: center; /* Center the image in the viewport */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+.chat-container {
+    width: 400px;
+    background-color: #ffffffef;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.chat-header {
+    display: flex; /* Enable flexbox layout */
+    align-items: center; /* Vertically center items */
+    justify-content: center; /* Horizontally center items */
+    margin-bottom: 20px;
+}
+.chat-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* Space between icon and heading */
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Cover the icon area without distortion */
+    display: block; /* Ensures proper spacing and alignment */
+}
+
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message.user {
+    text-align: right;
+}
+
+.chat-message.user .message-text {
+    background-color: #8dabe2;
+    color: #000000;
+    border-radius: 10px 10px 0 10px;
+}
+
+.chat-message.received .message-text {
+    background-color: #c687df; /* Blue background */
+    color: #0a0a0a; /* White text for contrast */
+    border-radius: 10px 10px 10px 0;
+}
+
+.chat-message .message-text {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0;
+    max-width: 80%;
+    word-break: break-all;
+}
+
+.chat-input {
+    display: flex;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
